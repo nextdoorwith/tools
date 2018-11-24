@@ -1,0 +1,8 @@
+abc
+‚ ‚¢‚¤‚¦‚¨
+abc abc@example.com
+‚ ‚¢‚¤‚¦‚¨:abc@example.com
+abc-def@com
+aaaa
+
+eof
