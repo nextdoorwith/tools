@@ -1,0 +1,53 @@
+-- for postgresql
+drop table if exists mst_company;
+create table mst_company (
+	comp_id varchar(6) not null,
+	comp_name varchar(256) not null,
+	ceo bytea,
+	emp_num int,
+	memo text,
+	delete_flg char(1) default '0',
+	constraint mst_company_key primary key(comp_id)
+);
+comment on table mst_company is '会社マスタ';
+comment on column mst_company.comp_id is '会社ID';
+comment on column mst_company.comp_name is '会社名';
+comment on column mst_company.ceo is '代表者';
+comment on column mst_company.emp_num is '従業員数';
+comment on column mst_company.memo is 'メモ';
+comment on column mst_company.delete_flg is '削除フラグ';
+
+drop table if exists mst_employee;
+create table mst_employee (
+	comp_id varchar(6) not null,
+	emp_no varchar(4) not null,
+	name bytea not null,
+	age int not null,
+	memo text,
+	delete_flg char(1) default '0',
+	constraint mst_employee_key primary key(comp_id, emp_no)
+);
+comment on table mst_employee is '従業員マスタ';
+comment on column mst_employee.comp_id is '会社ID';
+comment on column mst_employee.emp_no is '従業員No.';
+comment on column mst_employee.name is '氏名';
+comment on column mst_employee.age is '年齢';
+comment on column mst_employee.memo is 'メモ';
+comment on column mst_employee.delete_flg is '削除フラグ';
+
+drop table if exists mst_option_test;
+create table mst_option_test (
+	id varchar(6) not null,
+	enc bytea,
+	md5b64 text,
+	md5hex text,
+	md5bin bytea,
+	sha1b64 text,
+	sha1hex text,
+	sha1bin bytea,
+	sha2b64 text,
+	sha2hex text,
+	sha2bin bytea,
+	non char(1) default '0',
+	constraint mst_option_test_key primary key(id)
+);
