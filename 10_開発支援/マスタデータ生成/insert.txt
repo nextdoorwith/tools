@@ -1,0 +1,27 @@
+-- ★対象テーブル: xxx
+-- truncate table xxx;
+-- ★対象テーブル: mst_company
+-- truncate table mst_company;
+insert into mst_company(comp_id, comp_name, ceo, emp_num, memo, delete_flg) values('L11001', '株式会社L11001', pgp_sym_encrypt('山田太郎', 'enckey'), 100, null, '0');
+insert into mst_company(comp_id, comp_name, ceo, emp_num, memo, delete_flg) values('L11002', '株式会社L11002', pgp_sym_encrypt('山田次郎', 'enckey'), 200, 'メモ２', null);
+-- ★対象テーブル: mst_employee
+-- truncate table mst_employee;
+insert into mst_employee(comp_id, emp_no, name, age, memo, delete_flg) values('L11001', '1111', pgp_sym_encrypt('従業太郎', 'enckey'), 20, null, '0');
+insert into mst_employee(comp_id, emp_no, name, age, memo, delete_flg) values('L11002', '1112', pgp_sym_encrypt('従業花子', 'enckey'), 30, '1980年入社', '0');
+-- ★対象テーブル: dummy
+-- truncate table dummy;
+insert into dummy(comp_id, comp_name, ceo, emp_num, memo, delete_flg) values('dummy1', '株式会社dummy1', pgp_sym_encrypt('山田太郎', 'enckey'), 100, null, '0');
+insert into dummy(comp_id, comp_name, ceo, emp_num, memo, delete_flg) values('dummy2', '株式会社dummy2', pgp_sym_encrypt('山田次郎', 'enckey'), 200, 'メモ２', null);
+-- ★対象テーブル: mst_option_test
+-- truncate table mst_option_test;
+insert into mst_option_test(id, enc, md5b64, md5hex, md5bin, sha1b64, sha1hex, sha1bin, sha2b64, sha2hex, sha2bin) values('000001', pgp_sym_encrypt('12345Abcde', 'enckey'), 'V1jZCtkrkgC0g+KZ6bYtJg==', '5758d90ad92b9200b483e299e9b62d26', E'\\x5758d90ad92b9200b483e299e9b62d26', 'cmTBOfbBSIwV4rPCnnRd07z8IBU=', '7264c139f6c1488c15e2b3c29e745dd3bcfc2015', E'\\x7264c139f6c1488c15e2b3c29e745dd3bcfc2015', 'kAVjpIwEQHTcRn/qwRDfCTcjAdvBCWjCxEka0jmMk+Y=', '900563a48c044074dc467feac110df09372301dbc10968c2c4491ad2398c93e6', E'\\x900563a48c044074dc467feac110df09372301dbc10968c2c4491ad2398c93e6');
+insert into mst_option_test(id, enc, md5b64, md5hex, md5bin, sha1b64, sha1hex, sha1bin, sha2b64, sha2hex, sha2bin) values('000002', pgp_sym_encrypt('あいうえお', 'enckey'), 'ht6yejKQPacKeyNI/PNrww==', '86deb27a32903da70a7b2348fcf36bc3', E'\\x86deb27a32903da70a7b2348fcf36bc3', 'SrCFYxivIPp31EkmhPuNl4ngDLY=', '4ab0856318af20fa77d4492684fb8d9789e00cb6', E'\\x4ab0856318af20fa77d4492684fb8d9789e00cb6', '/bSB6pVv22VK/MMnz/m2JpZrKr2rw/Pm28sWZ6iI7Zo=', 'fdb481ea956fdb654afcc327cff9b626966b2abdabc3f3e6dbcb1667a888ed9a', E'\\xfdb481ea956fdb654afcc327cff9b626966b2abdabc3f3e6dbcb1667a888ed9a');
+insert into mst_option_test(id, enc, md5b64, md5hex, md5bin, sha1b64, sha1hex, sha1bin, sha2b64, sha2hex, sha2bin) values('000003', pgp_sym_encrypt('', 'enckey'), '1B2M2Y8AsgTpgAmY7PhCfg==', 'd41d8cd98f00b204e9800998ecf8427e', E'\\xd41d8cd98f00b204e9800998ecf8427e', '2jmj7l5rSw0yVb/vlWAYkK/YBwk=', 'da39a3ee5e6b4b0d3255bfef95601890afd80709', E'\\xda39a3ee5e6b4b0d3255bfef95601890afd80709', '47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=', 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', E'\\xe3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855');
+-- ★対象テーブル: mst_company
+-- truncate table mst_company;
+insert into mst_company(comp_id, comp_name, ceo, emp_num, memo, delete_flg) values('L21001', '株式会社L21001', pgp_sym_encrypt('山田太郎', 'enckey'), 100, null, '0');
+insert into mst_company(comp_id, comp_name, ceo, emp_num, memo, delete_flg) values('L21002', '株式会社L21002', pgp_sym_encrypt('山田次郎', 'enckey'), 200, 'メモ２', null);
+-- ★対象テーブル: mst_company
+-- truncate table mst_company;
+insert into mst_company(comp_id, comp_name, ceo, emp_num, memo, delete_flg) values('L31001', '株式会社L31001', pgp_sym_encrypt('山田太郎', 'enckey'), 100, null, '0');
+insert into mst_company(comp_id, comp_name, ceo, emp_num, memo, delete_flg) values('L31002', '株式会社L31002', pgp_sym_encrypt('山田次郎', 'enckey'), 200, 'メモ２', null);
