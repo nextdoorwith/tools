@@ -14,11 +14,11 @@ import example.web.constants.KbnEnumBase;
  */
 public enum UserType implements KbnEnumBase {
 
-	/** "管理者" */
+	/** 管理者 */
 	Admin("管理者",null,"10"),
-	/** "一般" */
+	/** 一般 */
 	Normal("一般",null,"01"),
-	/** "一般代理" */
+	/** 一般代理 */
 	Agent("一般代理",null,"09");
 
 	/** 名称 */

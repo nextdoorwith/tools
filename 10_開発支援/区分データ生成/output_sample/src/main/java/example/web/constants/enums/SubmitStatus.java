@@ -14,11 +14,11 @@ import example.web.constants.KbnEnumBase;
  */
 public enum SubmitStatus implements KbnEnumBase {
 
-	/** "未提出" */
+	/** 未提出 */
 	NotYet("未提出","未","0"),
-	/** "提出済" */
+	/** 提出済 */
 	Done("提出済","済","1"),
-	/** "不明" */
+	/** 不明 */
 	Unknown("不明","？","9");
 
 	/** 名称 */

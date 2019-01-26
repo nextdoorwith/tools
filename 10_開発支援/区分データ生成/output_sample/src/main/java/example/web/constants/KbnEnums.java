@@ -22,11 +22,11 @@ public class KbnEnums {
 	 */
 	public enum UserType implements KbnEnumBase {
 
-		/** "管理者" */
+		/** 管理者 */
 		Admin("管理者",null,"10"),
-		/** "一般" */
+		/** 一般 */
 		Normal("一般",null,"01"),
-		/** "一般代理" */
+		/** 一般代理 */
 		Agent("一般代理",null,"09");
 
 		/** 名称 */
@@ -78,7 +78,7 @@ public class KbnEnums {
 		 * @param value 区分値
 		 * @return 対応する列挙体が存在する場合はその列挙体、存在しない場合はnull
 		 */
-		public static UserType decode(String value) {
+		public static ユーザ種別 decode(String value) {
 			return value != null && valueMap.containsKey(value) ? valueMap.get(value) : null;
 		}
 
@@ -92,9 +92,9 @@ public class KbnEnums {
 	 */
 	public enum DeleteFlag implements KbnEnumBase {
 
-		/** "無効" */
+		/** 無効 */
 		Invalid("無効",null,"0"),
-		/** "有効" */
+		/** 有効 */
 		Valid("有効",null,"1");
 
 		/** 名称 */
@@ -146,7 +146,7 @@ public class KbnEnums {
 		 * @param value 区分値
 		 * @return 対応する列挙体が存在する場合はその列挙体、存在しない場合はnull
 		 */
-		public static DeleteFlag decode(String value) {
+		public static 削除フラグ decode(String value) {
 			return value != null && valueMap.containsKey(value) ? valueMap.get(value) : null;
 		}
 
@@ -160,11 +160,11 @@ public class KbnEnums {
 	 */
 	public enum SubmitStatus implements KbnEnumBase {
 
-		/** "未提出" */
+		/** 未提出 */
 		NotYet("未提出","未","0"),
-		/** "提出済" */
+		/** 提出済 */
 		Done("提出済","済","1"),
-		/** "不明" */
+		/** 不明 */
 		Unknown("不明","？","9");
 
 		/** 名称 */
@@ -216,7 +216,7 @@ public class KbnEnums {
 		 * @param value 区分値
 		 * @return 対応する列挙体が存在する場合はその列挙体、存在しない場合はnull
 		 */
-		public static SubmitStatus decode(String value) {
+		public static 提出状況 decode(String value) {
 			return value != null && valueMap.containsKey(value) ? valueMap.get(value) : null;
 		}
 

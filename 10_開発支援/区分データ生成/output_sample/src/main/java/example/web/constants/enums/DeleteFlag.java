@@ -14,9 +14,9 @@ import example.web.constants.KbnEnumBase;
  */
 public enum DeleteFlag implements KbnEnumBase {
 
-	/** "無効" */
+	/** 無効 */
 	Invalid("無効",null,"0"),
-	/** "有効" */
+	/** 有効 */
 	Valid("有効",null,"1");
 
 	/** 名称 */
