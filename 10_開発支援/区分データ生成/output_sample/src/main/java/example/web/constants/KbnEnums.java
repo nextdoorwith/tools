@@ -78,7 +78,7 @@ public class KbnEnums {
 		 * @param value 区分値
 		 * @return 対応する列挙体が存在する場合はその列挙体、存在しない場合はnull
 		 */
-		public static ユーザ種別 decode(String value) {
+		public static UserType decode(String value) {
 			return value != null && valueMap.containsKey(value) ? valueMap.get(value) : null;
 		}
 
@@ -146,7 +146,7 @@ public class KbnEnums {
 		 * @param value 区分値
 		 * @return 対応する列挙体が存在する場合はその列挙体、存在しない場合はnull
 		 */
-		public static 削除フラグ decode(String value) {
+		public static DeleteFlag decode(String value) {
 			return value != null && valueMap.containsKey(value) ? valueMap.get(value) : null;
 		}
 
@@ -216,7 +216,7 @@ public class KbnEnums {
 		 * @param value 区分値
 		 * @return 対応する列挙体が存在する場合はその列挙体、存在しない場合はnull
 		 */
-		public static 提出状況 decode(String value) {
+		public static SubmitStatus decode(String value) {
 			return value != null && valueMap.containsKey(value) ? valueMap.get(value) : null;
 		}
 
